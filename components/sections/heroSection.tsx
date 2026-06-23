@@ -33,11 +33,11 @@ export default function HeroSection() {
                     </p>
 
                     <div className="hero__actions">
-                        <a href="#projects" className="btn btn--primary">
+                        <a href="#about" className="btn btn--primary">
                             <i className="ti ti-player-play" aria-hidden="true" />
                             Start Challenge
                         </a>
-                        <a href="#about" className="btn btn--ghost">
+                        <a href="#projects" className="btn btn--ghost">
                             View Work →
                         </a>
                     </div>

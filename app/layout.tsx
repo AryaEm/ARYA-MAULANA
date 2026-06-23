@@ -3,7 +3,7 @@ import '@/app/globals.css'
 import Header from '@/components/layout/header'
 
 export const metadata: Metadata = {
-  title: '_ Arya Maulana',
+  title: '>_ Arya Maulana',
   description: 'Web Designer who treats every project like a puzzle worth solving.',
 }
 

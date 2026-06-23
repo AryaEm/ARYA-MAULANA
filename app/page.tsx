@@ -1,10 +1,13 @@
 import HeroSection from '@/components/sections/heroSection'
+import AboutSection from '@/components/sections/aboutSection'
+import ProjectSection from '@/components/sections/projectSection'
 
 export default function Home() {
   return (
     <>
       <HeroSection />
-      {/* section-section lain akan ditambahkan di sini */}
+      <AboutSection />
+      <ProjectSection />
     </>
   )
 }

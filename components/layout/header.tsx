@@ -1,13 +1,14 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
+import logo from '@/public/puzzle-code.png'
 import Link from 'next/link'
 
 const NAV_ITEMS = [
   { href: '#hero',    icon: 'ti-home',        label: 'home'    },
   { href: '#about',   icon: 'ti-user',         label: 'about'   },
   { href: '#projects', icon: 'ti-layout-grid', label: 'projects' },
-  { href: '#skills',  icon: 'ti-puzzle',       label: 'skills'  },
   { href: '#contact', icon: 'ti-mail',         label: 'contact' },
 ]
 
@@ -29,7 +30,7 @@ export default function Header() {
       <nav className="nav" aria-label="Main navigation">
         <Link href="/" className="nav__logo" aria-label="Home">
           <span className="nav__logo-box" aria-hidden="true">
-            <span className="nav__logo-inner" />
+            <Image src={logo} alt='Logo' className='nav__logo-inner'></Image>
           </span>
           <span className="nav__logo-name">
             Arya<span className="nav__logo-dot">.</span>Maulana
