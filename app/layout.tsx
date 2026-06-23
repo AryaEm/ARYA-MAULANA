@@ -1,41 +1,29 @@
-import type { Metadata } from 'next';
-import { Space_Grotesk, JetBrains_Mono } from 'next/font/google';
-import './globals.css';
-
-const spaceGrotesk = Space_Grotesk({ 
-  subsets: ['latin'],
-  variable: '--font-space-grotesk',
-  display: 'swap',
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  variable: '--font-jetbrains-mono',
-  display: 'swap',
-});
+import type { Metadata } from 'next'
+import '@/app/globals.css'
+import Header from '@/components/layout/header'
 
 export const metadata: Metadata = {
-  title: 'Arya Maulana - Frontend Developer & UI Designer',
-  description: 'Portfolio website showcasing web development projects and design work',
-  keywords: ['frontend developer', 'ui designer', 'web developer', 'react', 'nextjs', 'typescript'],
-  authors: [{ name: 'Your Name' }],
-  openGraph: {
-    title: 'Your Name - Frontend Developer',
-    description: 'Portfolio website showcasing web development projects',
-    type: 'website',
-  },
-};
+  title: '_ Arya Maulana',
+  description: 'Web Designer who treats every project like a puzzle worth solving.',
+}
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
-        {children}
+    <html lang="en">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+        />
+      </head>
+      <body>
+        <Header />
+        <main>{children}</main>
       </body>
     </html>
-  );
+  )
 }
