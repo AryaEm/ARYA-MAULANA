@@ -1035,3 +1035,251 @@ button {
   border-color: rgba(233, 30, 140, 0.35);
   color: #e91e8c;
 }
+
+.contact {
+  position: relative;
+  padding: 10rem 2rem 8rem;
+  border-top: 0.5px solid rgba(233, 30, 140, 0.12);
+  overflow: hidden;
+}
+
+.contact__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Section tag */
+.contact__tag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.contact__tag-line {
+  display: block;
+  height: 0.5px;
+  width: 28px;
+  background: #e91e8c;
+  flex-shrink: 0;
+}
+
+.contact__tag-label {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  color: #e91e8c;
+  letter-spacing: 0.18em;
+}
+
+/* Headline */
+.contact__headline {
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: #f5eef5;
+  margin-bottom: 1.25rem;
+}
+
+.contact__headline-accent {
+  color: #e91e8c;
+}
+
+.contact__sub {
+  font-size: 13px;
+  font-family: var(--font-mono);
+  color: rgba(240, 232, 240, 0.35);
+  line-height: 1.85;
+  max-width: 480px;
+  margin-bottom: 2.5rem;
+}
+
+/* Channel cards */
+.contact__channels {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 2rem;
+}
+
+.contact__channel {
+  border: 0.5px solid rgba(255, 255, 255, 0.07);
+  border-radius: 8px;
+  padding: 1.1rem 1.2rem;
+  background: rgba(255, 255, 255, 0.015);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  transition: border-color 0.22s, background 0.22s, transform 0.22s;
+  position: relative;
+}
+
+.contact__channel:hover {
+  border-color: rgba(233, 30, 140, 0.35);
+  background: rgba(233, 30, 140, 0.05);
+  transform: translateY(-3px);
+}
+
+.contact__channel-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 7px;
+  background: rgba(233, 30, 140, 0.1);
+  border: 0.5px solid rgba(233, 30, 140, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #e91e8c;
+  flex-shrink: 0;
+  transition: background 0.22s;
+}
+
+.contact__channel:hover .contact__channel-icon {
+  background: rgba(233, 30, 140, 0.18);
+}
+
+.contact__channel-body {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+  min-width: 0;
+}
+
+.contact__channel-label {
+  font-size: 9px;
+  font-family: var(--font-mono);
+  color: rgba(233, 30, 140, 0.5);
+  letter-spacing: 0.12em;
+}
+
+.contact__channel-value {
+  font-size: 12px;
+  font-family: var(--font-mono);
+  color: rgba(240, 232, 240, 0.65);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.22s;
+}
+
+.contact__channel:hover .contact__channel-value {
+  color: rgba(240, 232, 240, 0.9);
+}
+
+.contact__channel-arrow {
+  font-size: 14px;
+  color: rgba(240, 232, 240, 0.15);
+  flex-shrink: 0;
+  transition: color 0.22s, transform 0.22s;
+}
+
+.contact__channel:hover .contact__channel-arrow {
+  color: #e91e8c;
+  transform: translate(2px, -2px);
+}
+
+/* Divider */
+.contact__divider {
+  height: 0.5px;
+  background: rgba(255, 255, 255, 0.06);
+  margin-bottom: 1.75rem;
+}
+
+/* Bottom row */
+.contact__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.contact__meta {
+  font-size: 11px;
+  font-family: var(--font-mono);
+  color: rgba(240, 232, 240, 0.25);
+  line-height: 1.6;
+}
+
+.contact__meta-accent {
+  color: #e91e8c;
+}
+
+.contact__email-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 24px;
+  background: #e91e8c;
+  color: #0d0d0f;
+  border-radius: 5px;
+  font-size: 12px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.contact__email-btn:hover {
+  background: #c9166f;
+  transform: translateY(-2px);
+}
+
+.contact__email-btn i {
+  font-size: 15px;
+}
+
+/* Decorative puzzle grid — bottom right */
+.contact__deco {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 5px;
+  width: 110px;
+  height: 110px;
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.contact__deco-cell {
+  border: 0.5px solid #e91e8c;
+  border-radius: 3px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact {
+    padding: 4rem 1.25rem 3rem;
+  }
+
+  .contact__channels {
+    grid-template-columns: 1fr;
+  }
+
+  .contact__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact__email-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact__channels {
+    grid-template-columns: 1fr;
+  }
+}

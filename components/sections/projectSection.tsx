@@ -15,7 +15,7 @@ export default function ProjectSection() {
           </div>
 
           <a
-            href="https://github.com/AryaEm"
+            href="https://github.com/AryaEm?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
             className="projects__gh-link"

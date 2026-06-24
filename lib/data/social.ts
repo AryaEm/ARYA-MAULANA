@@ -1,19 +1,35 @@
-import { SocialLink } from '@/types';
+export type Channel = {
+  id: string
+  label: string
+  value: string
+  icon: string
+  href?: string
+}
 
-export const socials: SocialLink[] = [
+export const channels: Channel[] = [
   {
-    name: 'GitHub',
-    url: 'https://github.com/AryaEm',
-    icon: 'github'
+    id: 'email',
+    label: 'EMAIL',
+    value: 'ary4maulanaa@gmail.com',
+    icon: 'ti-mail',
   },
   {
-    name: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/arya-maulana-86a087285/',
-    icon: 'linkedin'
+    id: 'linkedin',
+    label: 'LINKEDIN',
+    value: 'in/arya-maulana',
+    icon: 'ti-brand-linkedin',
+    href: 'https://linkedin.com/in/arya-maulana-86a087285',
   },
   {
-    name: 'Instagram',
-    url: 'https://instagram.com/aryaa.em',
-    icon: 'instagram'
+    id: 'github',
+    label: 'GITHUB',
+    value: '@aryaem',
+    icon: 'ti-brand-github',
+    href: 'https://github.com/aryaem',
   },
-];
+]
+
+export const contactMeta = {
+  location: 'Indonesia',
+  responseTime: 'under 24h',
+}
