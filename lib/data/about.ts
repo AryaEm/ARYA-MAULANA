@@ -55,6 +55,13 @@ export const experience: TimelineItem[] = [
     tags: ['Figma', 'Canva'],
     // current: true,
   },
+  {
+    year: '2025 — Now',
+    role: 'Fresh Graduate',
+    place: 'Info loker lek',
+    tags: ['Next.js', 'Typescript', 'tailwind', 'Firebase'],
+    current: true,
+  },
 ]
 
 export const education: TimelineItem[] = [
@@ -63,12 +70,13 @@ export const education: TimelineItem[] = [
     role: 'Rekaya Perangkat Lunak',
     place: 'SMK Telkom Malang',
     tags: ['Frontend', "UI/UX"],
-    // current: true,
+    current: false,
   },
-  // {
-  //   year: '2017 — 2020',
-  //   role: 'SMA / SMK',
-  //   place: 'Nama Sekolah · Kota',
-  //   tags: ['IPA / RPL'],
-  // },
+  {
+    year: '2016 — Now',
+    role: 'Teknik Informatika',
+    place: 'Politeknik Negeri Malang',
+    tags: ['Teknologi Informasi', 'Web Developer'],
+    current: true,
+  },
 ]
