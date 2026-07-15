@@ -15,7 +15,7 @@ export default function HeroSection() {
                 <div className="hero__left">
                     <div className="hero__badge" aria-label="Level 1 unlocked">
                         <i className="ti ti-puzzle" aria-hidden="true" />
-                        LEVEL 01 — UNLOCKED
+                        LEVEL 01 \ UNLOCKED
                     </div>
 
                     <h1 className="hero__headline">

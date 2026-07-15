@@ -17,7 +17,7 @@ export default function AboutSection() {
         {/* Section tag */}
         <div className="about__tag" aria-hidden="true">
           <span className="about__tag-line" />
-          <span className="about__tag-label">ABOUT — LEVEL 02</span>
+          <span className="about__tag-label">ABOUT / LEVEL 02</span>
         </div>
 
         <div className="about__grid">

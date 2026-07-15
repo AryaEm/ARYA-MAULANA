@@ -7,7 +7,7 @@ export default function ContactSection() {
 
         <div className="contact__tag" aria-hidden="true">
           <span className="contact__tag-line" />
-          <span className="contact__tag-label">CONTACT — FINAL LEVEL</span>
+          <span className="contact__tag-label">CONTACT / FINAL LEVEL</span>
         </div>
 
         <h2 id="contact-heading" className="contact__headline">

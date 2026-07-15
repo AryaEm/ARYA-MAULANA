@@ -11,7 +11,7 @@ export default function ProjectSection() {
         <div className="projects__header">
           <div className="projects__tag" aria-hidden="true">
             <span className="projects__tag-line" />
-            <span className="projects__tag-label">PROJECTS — LEVEL 03</span>
+            <span className="projects__tag-label">PROJECTS \ LEVEL 03</span>
           </div>
 
           <a
@@ -33,7 +33,7 @@ export default function ProjectSection() {
             Things I&apos;ve <span className="projects__headline-accent">built.</span>
           </h2>
           <p className="projects__sub">
-            A selection of projects — each one a puzzle that needed solving.
+            A selection of projects, each one a puzzle that needed solving.
           </p>
         </div>
 

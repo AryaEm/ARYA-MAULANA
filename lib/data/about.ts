@@ -44,7 +44,7 @@ export type TimelineItem = {
   role: string
   place: string
   tags: string[]
-  current?: boolean
+  current: boolean
 }
 
 export const experience: TimelineItem[] = [
@@ -53,7 +53,7 @@ export const experience: TimelineItem[] = [
     role: 'Graphic Desain',
     place: 'Akademi Blayu FC',
     tags: ['Figma', 'Canva'],
-    // current: true,
+    current: false,
   },
   {
     year: '2025 — Now',

@@ -33,7 +33,7 @@ export default function Header() {
             <Image src={logo} alt='Logo' className='nav__logo-inner'></Image>
           </span>
           <span className="nav__logo-name">
-            Arya<span className="nav__logo-dot">.</span>Maulana
+            Aryaem<span className="nav__logo-dot">.</span>
           </span>
         </Link>
 
