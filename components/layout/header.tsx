@@ -6,10 +6,10 @@ import logo from '@/public/puzzle-code.png'
 import Link from 'next/link'
 
 const NAV_ITEMS = [
-  { href: '#hero',    icon: 'ti-home',        label: 'home'    },
-  { href: '#about',   icon: 'ti-user',         label: 'about'   },
+  { href: '#hero', icon: 'ti-home', label: 'home' },
+  { href: '#about', icon: 'ti-user', label: 'about' },
   { href: '#projects', icon: 'ti-layout-grid', label: 'projects' },
-  { href: '#contact', icon: 'ti-mail',         label: 'contact' },
+  { href: '#contact', icon: 'ti-mail', label: 'contact' },
 ]
 
 export default function Header() {
@@ -61,6 +61,6 @@ export default function Header() {
           </div>
         </div>
       </nav>
-     </header>
+    </header>
   )
 }
