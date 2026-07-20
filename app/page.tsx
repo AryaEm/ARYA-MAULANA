@@ -1,11 +1,11 @@
 'use client'
 
 import { useState } from 'react'
+import Header         from '@/components/layout/header'
 import HeroSection    from '@/components/sections/heroSection'
 import AboutSection   from '@/components/sections/aboutSection'
 import ProjectSection from '@/components/sections/projectSection'
 import ContactSection from '@/components/sections/contactSection'
-import Header         from '@/components/layout/header'
 
 export type Page = 'home' | 'about' | 'projects' | 'contact'
 

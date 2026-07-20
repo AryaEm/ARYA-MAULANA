@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import '@/app/globals.css'
-import Header from '@/components/layout/header'
 
 export const metadata: Metadata = {
   title: '>_ Arya Maulana',
@@ -21,8 +20,7 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <Header />
-        <main>{children}</main>
+        {children}
       </body>
     </html>
   )
