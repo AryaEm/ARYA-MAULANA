@@ -781,7 +781,7 @@ button {
 /* Preview pane */
 .fp__preview {
   background: rgba(233, 30, 140, 0.06);
-  min-height: 320px;
+  min-height: 360px;
   position: relative;
   display: flex;
   align-items: center;

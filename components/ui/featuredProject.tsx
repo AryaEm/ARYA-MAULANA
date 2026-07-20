@@ -42,7 +42,7 @@ export default function FeaturedProject({ project }: FeaturedProjectProps) {
               sizes="(max-width: 640px) 100vw, 55vw"
               style={{
                 objectFit: 'cover',
-                objectPosition: 'center',
+                objectPosition: 'top',
                 transition: 'transform 0.5s ease',
               }}
               priority

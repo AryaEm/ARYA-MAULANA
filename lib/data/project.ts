@@ -23,6 +23,7 @@ export const projects: Project[] = [
     repoUrl: 'https://github.com/AryaEm/ARYA-MAULANA',
     icon: 'ti-layout-dashboard',
     previewUrl: '/preview/portfolio-website.png',
+    featured: false,
   },
   {
     id: 'project-02',
@@ -34,7 +35,7 @@ export const projects: Project[] = [
     repoUrl: 'https://github.com/AryaEm/moodly',
     icon: 'ti-robot',
     previewUrl: '/preview/moodly.png',
-    featured: true,
+    featured: false,
   },
   {
     id: 'project-03',
@@ -45,15 +46,20 @@ export const projects: Project[] = [
     liveUrl: 'https://my-cashflo.vercel.app/',
     repoUrl: 'https://github.com/AryaEm/Cashflo',
     icon: 'ti-robot',
+    featured: false,
   },
   {
     id: 'project-04',
     num: 'PROJECT_04',
-    title: '-',
-    description: '-',
-    tags: ['1', '2', '3'],
-    // repoUrl: '/',
-    // icon: 'ti-api',
+    title: 'Margin',
+    description: 'Website Reading tracker + club buku mini, web ini buat catat buku yang sedang/sudah dibaca, beri rating & catatan. Bisa buat "club" privat bareng teman untuk baca bareng dan diskusi di thread.',
+    tags: ['Next.js', 'Tailwind', 'Firebase'],
+    liveUrl: 'https://margin-book.vercel.app',
+    repoUrl: 'https://github.com/aryaEm/margin',
+    previewUrl: '/preview/margin.png',
+    featured: true,
+
+
     icon: 'ti-robot',
   },
 ]
