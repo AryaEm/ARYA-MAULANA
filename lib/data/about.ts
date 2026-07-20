@@ -1,7 +1,7 @@
 export const aboutData = {
-  name: 'Your Name',
+  name: 'Arya Maulana',
   initials: 'YN',
-  role: 'Full-stack Developer',
+  role: 'Web Developer',
   location: 'Malang, Indonesia',
   bio: [
     { text: "I'm a developer based in " },
