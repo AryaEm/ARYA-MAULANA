@@ -1,3 +1,5 @@
+'use client'
+
 import type { Page } from '@/app/page'
 import SnakeGame from '@/components/ui/snakeGame'
 import { aboutData } from '@/lib/data/about'
@@ -11,9 +13,7 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
     <section className="hero" aria-label="Introduction">
       <div className="masonry">
 
-        {/* ── COL 1 ── */}
-
-        <article className="mcard mcard--pink mcard--intro">
+        <article className="mcard mcard--pink mcard--intro" style={{ '--i': 0 } as React.CSSProperties}>
           <div className="mcard__badge" aria-label="Level 1 unlocked">
             <i className="ti ti-puzzle" aria-hidden="true" />
             LEVEL 01 / UNLOCKED
@@ -30,7 +30,6 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
             I build interfaces that are{' '}
             <em className="mcard__em">purposeful, fast, and felt.</em>
           </p>
-          <br />
           <div className="mcard__actions">
             <button
               className="mcard__btn mcard__btn--solid"
@@ -48,27 +47,15 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
           </div>
         </article>
 
-        <article className="mcard mcard--stat">
-          <div className="mcard__label">// shipped</div>
-          <div className="mcard__stat-num">3</div>
-          <div className="mcard__stat-label">PROJECTS DONE</div>
-        </article>
-
-        <article className="mcard mcard--meta">
-          <div className="mcard__label">// location</div>
-          <div className="mcard__meta-val">
-            <i className="ti ti-map-pin" aria-hidden="true" />
-            Malang, Indonesia
+        <article className="mcard mcard--avail" style={{ '--i': 1 } as React.CSSProperties}>
+          <div className="mcard__label mcard__label--green">// status</div>
+          <div className="mcard__avail-val">
+            <span className="mcard__avail-dot" aria-hidden="true" />
+            open to work
           </div>
         </article>
 
-        {/* ── COL 2 ── */}
-
-        <article className="mcard mcard--snake">
-          <SnakeGame />
-        </article>
-
-        <article className="mcard mcard--traits">
+        <article className="mcard mcard--traits" style={{ '--i': 3 } as React.CSSProperties}>
           <div className="mcard__label">// approach</div>
           {[
             { icon: 'ti-puzzle', title: 'Problem-first', sub: 'understand before building' },
@@ -85,14 +72,31 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
           ))}
         </article>
 
-        <article className="mcard mcard--stat">
+        <article className="mcard mcard--meta" style={{ '--i': 2 } as React.CSSProperties}>
+          <div className="mcard__label">// location</div>
+          <div className="mcard__meta-val">
+            <i className="ti ti-map-pin" aria-hidden="true" />
+            Malang, Indonesia
+          </div>
+        </article>
+
+        <article className="mcard mcard--stat" style={{ '--i': 4 } as React.CSSProperties}>
+          <div className="mcard__label">// shipped</div>
+          <div className="mcard__stat-num">3</div>
+          <div className="mcard__stat-label">PROJECTS DONE</div>
+        </article>
+
+        <article className="mcard mcard--stat" style={{ '--i': 5 } as React.CSSProperties}>
           <div className="mcard__label">// solved</div>
           <div className="mcard__stat-num">∞</div>
           <div className="mcard__stat-label">PUZZLES</div>
         </article>
 
-        {/* CURRENTLY BUILDING */}
-        <article className="mcard mcard--building">
+        <article className="mcard mcard--snake" style={{ '--i': 6 } as React.CSSProperties}>
+          <SnakeGame />
+        </article>
+
+        <article className="mcard mcard--building" style={{ '--i': 7 } as React.CSSProperties}>
           <div className="mcard__label">// currently building</div>
           <div className="mcard__building-name">Margin</div>
           <div className="mcard__building-desc">Reading tracker + book club platform</div>
@@ -105,9 +109,14 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
           </div>
         </article>
 
-        {/* ── COL 3 ── */}
+        <article className="mcard mcard--meta" style={{ '--i': 8 } as React.CSSProperties}>
+          <div className="mcard__label">// response time</div>
+          <div className="mcard__meta-val">
+            under <span className="mcard__meta-acc">24h</span>
+          </div>
+        </article>
 
-        <article className="mcard mcard--id">
+        <article className="mcard mcard--id" style={{ '--i': 9 } as React.CSSProperties}>
           <div className="mcard__id-row">
             <div className="mcard__avatar" aria-hidden="true">AM</div>
             <div>
@@ -133,15 +142,7 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
           </div>
         </article>
 
-        <article className="mcard mcard--avail">
-          <div className="mcard__label mcard__label--green">// status</div>
-          <div className="mcard__avail-val">
-            <span className="mcard__avail-dot" aria-hidden="true" />
-            open to work
-          </div>
-        </article>
-
-        <article className="mcard mcard--stack">
+        <article className="mcard mcard--stack" style={{ '--i': 10 } as React.CSSProperties}>
           <div className="mcard__label">// current stack</div>
           <div className="mcard__chips">
             {['Next.js', 'TypeScript', 'Tailwind', 'Firebase', 'React', 'Node.js'].map((t) => (
@@ -150,16 +151,7 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
           </div>
         </article>
 
-        <article className="mcard mcard--meta">
-          <div className="mcard__label">// response time</div>
-          <div className="mcard__meta-val">
-            under <span className="mcard__meta-acc">24h</span>
-          </div>
-        </article>
-
-        {/* ── COL 4 ── */}
-
-        <article className="mcard mcard--available">
+        <article className="mcard mcard--available" style={{ '--i': 11 } as React.CSSProperties}>
           <div className="mcard__label">// available for</div>
           <div className="mcard__avfor-list">
             <div className="mcard__avfor-item">
@@ -177,7 +169,7 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
           </div>
         </article>
 
-        <article className="mcard mcard--cv">
+        <article className="mcard mcard--cv" style={{ '--i': 12 } as React.CSSProperties}>
           <div className="mcard__label">// resume</div>
           <a
             href="/CV-AryaMaulana.pdf"
@@ -190,12 +182,11 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
           </a>
           <p className="mcard__cv-sub">last updated 2025</p>
         </article>
-
       </div>
 
       <style jsx>{`
         .hero {
-          padding-top: 62px;
+          padding-top: 20px;
           min-height: 100dvh;
         }
 
@@ -217,6 +208,75 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
           transition: border-color 0.22s ease, transform 0.22s ease;
           padding: 1rem 1.2rem;
         }
+
+        .mcard {
+          -webkit-column-break-inside: avoid;
+          page-break-inside: avoid;
+          display: inline-block;
+          width: 100%;
+
+          /* Pure CSS Keyframe Animation with Stagger */
+          opacity: 0;
+          animation: mcardEntrance 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+          animation-delay: calc(var(--i) * 0.05s);
+          will-change: opacity, transform;
+        }
+
+        @keyframes mcardEntrance {
+          from {
+            opacity: 0;
+            transform: translateY(16px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 1280px) {
+          .masonry {
+            column-count: 3;
+          }
+        }
+
+        @media (max-width: 900px) {
+          .masonry {
+            column-count: 2;
+          }
+
+          .hero {
+            padding-top: 62px;
+          }
+        }
+
+        @media (max-width: 600px) {
+        .masonry {
+          display: flex;
+          flex-direction: column;
+          gap: 2px;
+          padding: 1.25rem;
+        }
+
+        .mcard--intro { order: 1; }
+        .mcard--id { order: 2; }   
+        .mcard--stack { order: 3; }
+        .mcard--available { order: 4; }
+        .mcard--avail { order: 5; }
+        .mcard--building { order: 7; }  
+        .mcard--snake { order: 20; }
+        .mcard--cv { order: 21; }
+        
+        .mcard--traits { 
+          display: none !important
+        }
+        .mcard--meta { 
+          display: none
+        } 
+        .mcard--stat { 
+          display: none
+        }
+      }
 
         .mcard:hover {
           border-color: rgba(233, 30, 140, 0.28);

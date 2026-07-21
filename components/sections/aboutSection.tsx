@@ -86,7 +86,7 @@ export default function AboutSection() {
         >
           <div className="about__tag" aria-hidden="true">
             <span className="about__tag-line" />
-            <span className="about__tag-label">ABOUT — LEVEL 02</span>
+            <span className="about__tag-label">ABOUT / LEVEL 02</span>
           </div>
         </div>
 
@@ -699,6 +699,7 @@ export default function AboutSection() {
         @media (max-width: 560px) {
           .about {
             padding: 4rem 1.25rem;
+            margin-top: 20px
           }
 
           .mindset-grid {

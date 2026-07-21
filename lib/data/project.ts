@@ -18,7 +18,7 @@ export const projects: Project[] = [
     title: 'Personal Website',
     description:
       'Yes, this is the website you’re currently accessing—a collection of projects I’ve built, problems I’ve solved, and a direct line if you want to work together.',
-    tags: ['Next.js', 'Tailwind'],
+    tags: ['Next.js', 'Tailwind', 'Framer Motion'],
     liveUrl: 'https://arya-maulana.vercel.app',
     repoUrl: 'https://github.com/AryaEm/ARYA-MAULANA',
     icon: 'ti-layout-dashboard',
