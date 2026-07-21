@@ -25,7 +25,7 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
             problems.
           </h1>
           <p className="mcard__sub">
-            Frontend dev who starts with the{' '}
+            Web dev who starts with the{' '}
             <em className="mcard__em">why</em>, not the how.
             I build interfaces that are{' '}
             <em className="mcard__em">purposeful, fast, and felt.</em>
@@ -280,7 +280,12 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
         .mcard:hover {
           border-color: rgba(233, 30, 140, 0.28);
           transform: translateY(-2px);
-        }a
+        }
+
+        .mcard--avail {
+          background: rgba(74, 222, 128, 0.03);
+          border-color: rgba(74, 222, 128, 0.14);
+        }
 
         /* ── LABEL ── */
         .mcard__label {

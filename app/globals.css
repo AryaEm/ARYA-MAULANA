@@ -51,6 +51,22 @@ body {
   background: rgba(221, 221, 221, 0.050);
 }
 
+@media (max-width: 720px) {
+  .mcard {
+    background: rgba(255, 255, 255, 0.088);
+    border: 1px solid rgba(255, 192, 203, 0.289) !important;
+  }
+
+  .mcard--pink {
+    background: rgba(233, 30, 142, 0.109) !important;
+    border-color: rgba(233, 30, 140, 0.050);
+  }
+
+  .mcard--avail {
+    border: 1px solid rgba(0, 128, 0, 0.488) !important;
+  }
+}
+
 .mcard--pink {
   background: rgba(233, 30, 140, 0.050);
   border-color: rgba(233, 30, 140, 0.050);
