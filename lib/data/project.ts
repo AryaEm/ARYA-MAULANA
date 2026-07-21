@@ -57,9 +57,19 @@ export const projects: Project[] = [
     liveUrl: 'https://margin-book.vercel.app',
     repoUrl: 'https://github.com/aryaEm/margin',
     previewUrl: '/preview/margin.png',
+    featured: false,
+    icon: 'ti-robot',
+  },
+  {
+    id: 'project-05',
+    num: 'PROJECT_05',
+    title: 'Lunvera',
+    description: 'Platform edukasi desain website untuk pemula yang ingin memahami dasar-dasar UI design. Website ini membantu pengguna belajar melalui perbandingan desain, penjelasan visual, dan tips praktis agar mampu membuat tampilan website yang lebih baik.',
+    tags: ['Next.js', 'Tailwind'],
+    liveUrl: 'https://lunveraa.vercel.app/',
+    repoUrl: 'https://github.com/aryaEm/lunvera',
+    previewUrl: '/preview/lunvera.png',
     featured: true,
-
-
     icon: 'ti-robot',
   },
 ]
