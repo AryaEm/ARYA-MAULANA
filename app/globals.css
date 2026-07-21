@@ -47,6 +47,20 @@ body {
   overflow-x: hidden;
 }
 
+.mcard {
+  background: rgba(221, 221, 221, 0.050);
+}
+
+.mcard--pink {
+  background: rgba(233, 30, 140, 0.050);
+  border-color: rgba(233, 30, 140, 0.050);
+}
+
+.mcard--avail {
+  background: rgba(74, 222, 128, 0.050);
+  border-color: rgba(74, 222, 128, 0.050);
+}
+
 ::selection {
   background: var(--pink);
   color: var(--bg);
@@ -1041,9 +1055,10 @@ button {
 
 .contact {
   position: relative;
-  padding: 10rem 2rem 8rem;
+  padding: 10rem 2rem 0rem;
   border-top: 0.5px solid rgba(233, 30, 140, 0.12);
   overflow: hidden;
+  max-height: 100dvh;
 }
 
 .contact__inner {

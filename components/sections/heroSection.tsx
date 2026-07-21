@@ -204,7 +204,6 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
           margin-bottom: 10px;
           border: 0.5px solid rgba(255, 255, 255, 0.07);
           border-radius: 10px;
-          background: rgba(255, 255, 255, 0.018);
           transition: border-color 0.22s ease, transform 0.22s ease;
           padding: 1rem 1.2rem;
         }
@@ -281,17 +280,7 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
         .mcard:hover {
           border-color: rgba(233, 30, 140, 0.28);
           transform: translateY(-2px);
-        }
-
-        .mcard--pink {
-          background: rgba(233, 30, 140, 0.04);
-          border-color: rgba(233, 30, 140, 0.18);
-        }
-
-        .mcard--avail {
-          background: rgba(74, 222, 128, 0.03);
-          border-color: rgba(74, 222, 128, 0.14);
-        }
+        }a
 
         /* ── LABEL ── */
         .mcard__label {
