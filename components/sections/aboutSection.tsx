@@ -106,7 +106,7 @@ export default function AboutSection() {
               delay={0}
             >
               <p className="chapter-body">
-                Every time I opened a website or app, I couldn&apos;t help but wonder —
+                Every time I opened a website or app, I couldn&apos;t help but wonder,
                 <em> "how does this even work?"</em> or{' '}
                 <em>"if this was built differently, it would feel so much better."</em>
               </p>

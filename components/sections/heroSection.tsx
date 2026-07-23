@@ -193,7 +193,7 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
         .masonry {
           columns: 4;
           column-gap: 10px;
-          padding: 2rem 2rem 2.5rem;
+          padding: 3rem 2rem 2.5rem;
           max-width: 1300px;
           margin: 0 auto;
         }
