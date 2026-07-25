@@ -261,66 +261,7 @@ export default function SnakeGame() {
       </div>
 
       <style jsx>{`
-        .sg {
-          display: flex;
-          flex-direction: column;
-          overflow: hidden;
-          border-radius: 10px;
-          border: 0.5px solid rgba(233, 30, 140, 0.2);
-          background: rgba(255, 255, 255, 0.01);
-        }
-
-        .sg__bar {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding: 7px 12px;
-          border-bottom: 0.5px solid rgba(233, 30, 140, 0.1);
-          background: rgba(233, 30, 140, 0.04);
-          flex-shrink: 0;
-        }
-
-        .sg__title {
-          font-size: 9px;
-          font-family: var(--font-mono);
-          color: rgba(233, 30, 140, 0.5);
-          letter-spacing: 0.1em;
-        }
-
-        .sg__score {
-          font-size: 9px;
-          font-family: var(--font-mono);
-          color: rgba(240, 232, 240, 0.28);
-        }
-
-        .sg__score-val { color: #e91e8c; }
-
-        .sg__canvas {
-          display: block;
-          width: 100%;
-          flex: 1;
-        }
-
-        .sg__foot {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding: 5px 12px;
-          border-top: 0.5px solid rgba(255, 255, 255, 0.05);
-          flex-shrink: 0;
-        }
-
-        .sg__hint {
-          font-size: 9px;
-          font-family: var(--font-mono);
-          color: rgba(240, 232, 240, 0.18);
-        }
-
-        .sg__collected {
-          font-size: 9px;
-          font-family: var(--font-mono);
-          color: rgba(233, 30, 140, 0.5);
-        }
+        
       `}</style>
     </div>
   )
