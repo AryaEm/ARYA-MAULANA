@@ -12,7 +12,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <i className={`ti ${project.icon ?? 'ti-code'}`} />
       </div>
       <h3 className="pc__title">{project.title}</h3>
-      <p className="pc__desc">{project.description}</p>
 
       <div className="pc__tags" aria-label="Technologies">
         {project.tags.map((tag) => (
