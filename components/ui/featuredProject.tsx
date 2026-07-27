@@ -69,7 +69,6 @@ export default function FeaturedProject({ project }: FeaturedProjectProps) {
           )}
         </h3>
 
-        <p className="fp__desc">{project.description}</p>
 
         <div className="fp__tags" aria-label="Technologies">
           {project.tags.map((tag) => (

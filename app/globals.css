@@ -47,6 +47,35 @@ body {
   overflow-x: hidden;
 }
 
+/* Deteksi high DPI / scaling tinggi */
+@media screen and (-webkit-min-device-pixel-ratio: 1.25),
+screen and (min-resolution: 120dpi) {
+
+  .masonry {
+    columns: 3;
+    /* kurangi kolom */
+    padding: 1.5rem;
+  }
+
+  /* font sedikit dikecilkan */
+  html {
+    font-size: 14px;
+    /* default 16px */
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.5),
+screen and (min-resolution: 144dpi) {
+
+  .masonry {
+    columns: 2;
+  }
+
+  html {
+    font-size: 13px;
+  }
+}
+
 .mcard {
   background: rgba(221, 221, 221, 0.050);
 }
@@ -1765,7 +1794,10 @@ button {
   columns: 4;
   column-gap: 10px;
   padding: 3rem 2rem 2.5rem;
-  max-width: 1300px;
+  max-width: min(1300px, 95vw);
+  /* tidak overflow */
+  padding: clamp(1rem, 3vw, 3rem);
+  /* scale dengan viewport */
   margin: 0 auto;
 }
 

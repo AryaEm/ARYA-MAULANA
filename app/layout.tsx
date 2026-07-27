@@ -81,9 +81,7 @@ export const metadata: Metadata = {
     },
   },
 
-  // verification: {
-  //   google: 'xxxxxxxxxxxxxxxxxxxx',
-  // },
+  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
 }
 
 export default function RootLayout({
@@ -93,6 +91,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
       <head>
         <link
           rel="stylesheet"
