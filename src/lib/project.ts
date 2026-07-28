@@ -53,7 +53,7 @@ export const projects: Project[] = [
     year: 2026,
     demoUrl: "https://lunvera.vercel.app",
     githubUrl: "https://github.com/aryaEm/lunvera",
-    image: "/lunvera.png",
+    image: "/lunveraa.png",
   },
   {
     id: "cashflo",
