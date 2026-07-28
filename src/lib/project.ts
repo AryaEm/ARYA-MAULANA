@@ -53,6 +53,15 @@ export const projects: Project[] = [
     demoUrl: "#",
   },
   {
+    id: "divelight",
+    title: "DiveLight",
+    hook: "Ive Gallery",
+    description: "A visual-first Ive gallery, built to explore how far aesthetic and layout can carry user experience.",
+    tech: ["Next.js", "Firebase", "Tailwind CSS", "TypeScript", "Framer Motion"],
+    year: 2025,
+    demoUrl: "#",
+  },
+  {
     id: "moodly",
     title: "Moodly",
     hook: "Track your daily emotion and mind flow.",
