@@ -40,6 +40,10 @@ body {
     var(--color-bg);
 }
 
+button {
+  cursor: pointer;
+}
+
 .masonry {
   column-gap: 0.8rem;
 }

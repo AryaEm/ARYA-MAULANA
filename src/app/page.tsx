@@ -6,7 +6,7 @@ import { TabId } from "@/types";
 import Sidebar from "@/components/layout/Sidebar";
 import MobileNav from "@/components/layout/MobileNav";
 import HomeView from "@/components/sections/HomeView";
-import PlaceholderView from "@/components/sections/PlaceholderView";
+// import PlaceholderView from "@/components/sections/PlaceholderView";
 import AboutSection from "@/components/sections/AboutSection";
 import ProjectSection from "@/components/sections/ProjectSection";
 import ContactSection from "@/components/sections/Contact";
@@ -35,7 +35,7 @@ export default function Home() {
   };
 
   return (
-    <main className="relative mx-auto flex w-full max-w-6xl flex-col px-3 pb-3 pt-20 sm:pb-0 sm:pl-36 sm:pr-6 sm:pt-0">
+    <main className="relative mx-auto justify-center flex w-full max-w-6xl flex-col px-3 pb-3 pt-20 sm:pb-0 sm:px-8 sm:pt-0">
       <Sidebar activeTab={activeTab} onChange={setActiveTab} />
       <MobileNav activeTab={activeTab} onChange={setActiveTab} />
 

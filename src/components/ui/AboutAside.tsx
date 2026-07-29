@@ -19,14 +19,6 @@ import {
 } from 'lucide-react'
 import { aboutData } from '@/lib/about'
 
-// Map string icon key -> lucide component
-const TRAIT_ICONS: Record<string, React.ElementType> = {
-    'ti-puzzle': Puzzle,
-    'ti-terminal': Terminal,
-    'ti-palette': Palette,
-    'ti-rocket': Rocket,
-}
-
 const SOCIAL_ICONS: Record<string, React.ElementType> = {
     'ti-brand-github': Github,
     'ti-brand-linkedin': Linkedin,

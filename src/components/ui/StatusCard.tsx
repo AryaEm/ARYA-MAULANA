@@ -42,7 +42,7 @@ export default function StatusCard() {
 
             <div className="flex items-center gap-1.5 border-t border-[var(--color-border-soft)] pt-2.5">
                 <CheckCircle2 size={12} className="text-[var(--color-accent)]" />
-                <span className="font-mono text-[10px] text-[var(--color-ink-dim)]">5 projects done</span>
+                <span className="font-mono text-[10px] text-[var(--color-ink-dim)]">6 projects done</span>
             </div>
         </div>
     );

@@ -29,7 +29,8 @@ export default function HeroCard({ onNavigate }: Props) {
 
       {/* Headline Text - Clamp scaling */}
       <p className="max-w-2xl font-display text-[clamp(1.25rem,2.5vw+0.5rem,2.75rem)] font-semibold leading-none text-[var(--color-ink)]">
-        I don't just write{" "}
+        I don't just <br /> 
+        write{" "}
         <span className="text-[var(--color-ink-faint)] line-through decoration-2 decoration-[var(--color-accent)]/70">
           code
         </span>,<br />I{" "}

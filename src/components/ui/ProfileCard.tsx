@@ -41,10 +41,10 @@ export default function ProfileCard() {
             </div>
 
             {/* Garis Pemisah (Divider) */}
-            <div className="h-px w-full bg-[var(--color-border)] mt-0.5 md:mt-1" />
+            <div className="h-px w-full bg-[var(--color-border)] mt-0.5 md:mt-0" />
 
             {/* Bagian Bawah: Ikon Sosial Media */}
-            <div className="flex flex-wrap items-center gap-2 md:gap-2.5 pt-0.5 md:pt-1">
+            <div className="flex flex-wrap items-center gap-2 md:gap-2.5 pt-0.5 md:pt-0">
                 {SOCIAL_LINKS.map((social) => (
                     <a
                         key={social.name}
@@ -52,7 +52,7 @@ export default function ProfileCard() {
                         target="_blank"
                         rel="noopener noreferrer"
                         title={social.name}
-                        className="group/icon flex h-8 w-8 md:h-9 md:w-9 items-center justify-center rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)]/50 transition-all hover:border-[var(--color-border-hover)] hover:bg-[var(--color-accent)]/[0.05]"
+                        className="group/icon flex h-8 w-8 md:h-8 md:w-8 items-center justify-center rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)]/50 transition-all hover:border-[var(--color-border-hover)] hover:bg-[var(--color-accent)]/[0.05]"
                     >
                         {getSocialIcon(social.iconName)}
                     </a>

@@ -4,19 +4,19 @@ import { STACK_GROUPS, MINDSET_CARDS, PERSPECTIVE_ITEMS } from '@/lib/about'
 
 export default function AboutSection() {
   return (
-    <section id="about" className="w-full max-w-[1100px] mx-auto px-6 py-16 text-zinc-200 font-sans">
+    <section id="about" className="w-full max-w-[1100px] mx-auto px-6 mt-16 text-zinc-200 font-sans">
 
-      <div className="mb-10">
+      <div className="mb-6">
         <div className="flex items-center gap-3 font-mono text-[11px] text-[var(--color-accent)] tracking-widest uppercase">
           <span>About</span>
         </div>
       </div>
 
       {/* Main Layout Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_310px] gap-12 lg:gap-16 items-start relative">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_310px] gap-12 lg:gap-6 items-start relative">
 
         {/* LEFT COLUMN: Timeline Chapters */}
-        <div className="scroll-container relative p-4 max-h-[calc(100vh-6rem)] overflow-y-auto overscroll-contain">
+        <div className="scroll-container relative p-4 max-h-[calc(100vh-10rem)] overflow-y-auto overscroll-contain">
           {/* Vertical Line */}
           <div
             aria-hidden="true"

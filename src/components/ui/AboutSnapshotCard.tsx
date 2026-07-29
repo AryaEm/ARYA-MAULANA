@@ -2,7 +2,7 @@
 
 import { Code2 } from "lucide-react";
 
-const stack = ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Node.js"];
+const stack = ["React", "Next.js", "TypeScript", "JavaScript", "Node.js", "Tailwind CSS", "Firebase"];
 
 export default function AboutSnapshotCard() {
   return (

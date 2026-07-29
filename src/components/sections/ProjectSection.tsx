@@ -90,7 +90,7 @@ export default function ProjectSection() {
             </div>
 
             {/* Footer / Pagination Bar */}
-            <div className="py-6 px-8 flex items-center justify-between border-t border-[var(--color-border-soft)] bg-[var(--color-surface-raised)]/40">
+            <div className="py-4 px-8 flex items-center justify-between border-t border-[var(--color-border-soft)] bg-[var(--color-surface-raised)]/40">
                 {/* Pagination Dots */}
                 <div className="flex items-center gap-2">
                     {projects.map((_, i) => (
