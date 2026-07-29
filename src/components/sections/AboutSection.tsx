@@ -1,46 +1,11 @@
-import Link from 'next/link'
 import ChapterBlock from '@/components/ui/ChapterBlock'
-import { aboutData } from '@/lib/about'
-
-const STACK_GROUPS = [
-  {
-    label: 'FRONTEND',
-    items: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
-  },
-  {
-    label: 'BACKEND & DB',
-    items: ['Firebase', 'Firestore', 'Node.js'],
-  },
-  {
-    label: 'TOOLS',
-    items: ['Git', 'Figma', 'VS Code'],
-  },
-]
-
-const MINDSET_CARDS = [
-  { icon: 'ti-code', label: 'Clean structure' },
-  { icon: 'ti-palette', label: 'Distinctive design' },
-  { icon: 'ti-users', label: 'Real user needs' },
-  { icon: 'ti-trending-up', label: 'Built to scale' },
-]
-
-const PERSPECTIVE_ITEMS = {
-  dev: [
-    { icon: 'ti-code', text: 'Clean, readable, scalable code' },
-    { icon: 'ti-layers', text: 'Architecture with a direction' },
-    { icon: 'ti-refresh', text: 'Reusable components, maintainable systems' },
-  ],
-  user: [
-    { icon: 'ti-hand-click', text: 'Intuitive, no explanation needed' },
-    { icon: 'ti-sparkles', text: 'Design that has character, not generic' },
-    { icon: 'ti-heart', text: 'Feels good to use in the real world' },
-  ],
-}
+import AboutAside from '../ui/AboutAside'
+import { STACK_GROUPS, MINDSET_CARDS, PERSPECTIVE_ITEMS } from '@/lib/about'
 
 export default function AboutSection() {
   return (
     <section id="about" className="w-full max-w-[1100px] mx-auto px-6 py-16 text-zinc-200 font-sans">
-      
+
       <div className="mb-10">
         <div className="flex items-center gap-3 font-mono text-[11px] text-[var(--color-accent)] tracking-widest uppercase">
           <span>About</span>
@@ -49,15 +14,14 @@ export default function AboutSection() {
 
       {/* Main Layout Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_310px] gap-12 lg:gap-16 items-start relative">
-        
+
         {/* LEFT COLUMN: Timeline Chapters */}
-        <div className="relative">
+        <div className="scroll-container relative p-4 max-h-[calc(100vh-6rem)] overflow-y-auto overscroll-contain">
           {/* Vertical Line */}
           <div
             aria-hidden="true"
-            className="absolute left-0 top-2 bottom-2 w-[1px] bg-gradient-to-b from-[var(--color-accent)]/40 via-zinc-800 to-transparent"
+            className="absolute left-4 top-2 bottom-2 w-[1px] bg-gradient-to-b from-[var(--color-accent)]/40 via-zinc-800 to-transparent"
           />
-
           {/* CHAPTER 01 */}
           <ChapterBlock
             num="01 / origin"
@@ -114,7 +78,7 @@ export default function AboutSection() {
 
             {/* Duality Box */}
             <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr] bg-zinc-900 border border-zinc-800/80 rounded-lg overflow-hidden mt-4">
-              
+
               {/* Developer Side */}
               <div className="p-4 space-y-3">
                 <div className="font-mono text-[10px] text-[var(--color-accent)] tracking-wider">// as a developer</div>
@@ -180,68 +144,8 @@ export default function AboutSection() {
         </div>
 
         {/* RIGHT COLUMN: Sticky Identity Card (Selesai Diperbaiki) */}
-        <aside className="w-full lg:sticky lg:top-24">
-          <div className="p-4 rounded-xl bg-zinc-900/90 border border-zinc-800/80 backdrop-blur-md space-y-4">
-            
-            {/* Profile Header */}
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-md bg-rose-500/10 border border-rose-500/30 text-[var(--color-accent)] font-mono font-bold text-xs flex items-center justify-center shrink-0">
-                {aboutData.initials}
-              </div>
-              <div>
-                <div className="font-sans font-bold text-xs text-zinc-100">{aboutData.name}</div>
-                <div className="font-mono text-[10px] text-zinc-500 tracking-wider uppercase mt-0.5">{aboutData.role}</div>
-              </div>
-            </div>
+        <AboutAside />
 
-            <div className="h-[1px] bg-zinc-800/80" aria-hidden="true" />
-
-            {/* Quick Facts */}
-            <div className="space-y-2 font-mono text-[11px]">
-              {[
-                { key: 'base', val: aboutData.location },
-                { key: 'focus', val: 'Web Developer · UI/UX' },
-                { key: 'shipped', val: '6 projects' },
-                { key: 'status', val: 'open to work', green: true },
-              ].map((f) => (
-                <div key={f.key} className="flex justify-between items-center">
-                  <span className="text-zinc-500">{f.key}</span>
-                  <span className={f.green ? 'text-emerald-400' : 'text-zinc-300'}>
-                    {f.val}
-                  </span>
-                </div>
-              ))}
-            </div>
-
-            <div className="h-[1px] bg-zinc-800/80" aria-hidden="true" />
-
-            <div className="flex gap-2">
-              {aboutData.socials.map((s) => (
-                <Link
-                  key={s.label}
-                  href={s.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={s.label}
-                  className="flex-1 h-8 flex items-center justify-center rounded bg-zinc-800/40 border border-zinc-700/50 text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800 transition-colors text-sm"
-                >
-                  <i className={`ti ${s.icon}`} aria-hidden="true" />
-                </Link>
-              ))}
-            </div>
-
-            <div className="h-[1px] bg-zinc-800/80" aria-hidden="true" />
-
-            <Link
-              href={aboutData.cvUrl}
-              download
-              className="w-full py-2 px-3 rounded bg-[var(--color-accent)] hover:opacity-90 active:scale-[0.98] text-white font-mono text-xs font-semibold flex items-center justify-center gap-2 transition-all shadow-md shadow-rose-600/20"
-            >
-              <i className="ti ti-download" aria-hidden="true" />
-              <span>download cv</span>
-            </Link>
-          </div>
-        </aside>
 
       </div>
     </section>

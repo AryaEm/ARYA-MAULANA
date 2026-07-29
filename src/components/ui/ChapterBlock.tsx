@@ -1,4 +1,6 @@
-import React from 'react'
+'use client'
+
+import React, { useEffect, useRef, useState } from 'react'
 
 interface ChapterBlockProps {
     num: string
@@ -13,8 +15,42 @@ export default function ChapterBlock({
     children,
     active = false,
 }: ChapterBlockProps) {
+    const ref = useRef<HTMLDivElement>(null)
+    const [isVisible, setIsVisible] = useState(false)
+
+    useEffect(() => {
+        const el = ref.current
+        if (!el) return
+
+        // Cari scroll container terdekat (LEFT COLUMN yang overflow-y-auto)
+        const scrollParent = el.closest('.scroll-container')
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true)
+                    observer.unobserve(el) // muncul sekali aja, gak hilang lagi pas scroll balik
+                }
+            },
+            {
+                root: scrollParent ?? null,
+                threshold: 0.15,
+                rootMargin: '0px 0px -10% 0px',
+            }
+        )
+
+        observer.observe(el)
+        return () => observer.disconnect()
+    }, [])
+
     return (
-        <div className="relative pl-7 mb-12">
+        <div
+            ref={ref}
+            className={`relative pl-7 mb-12 transition-all duration-700 ease-out ${isVisible
+                    ? 'opacity-100 translate-y-0'
+                    : 'opacity-0 translate-y-6'
+                }`}
+        >
             <div
                 aria-hidden="true"
                 className={`absolute -left-[4.5px] top-1.5 h-2.5 w-2.5 rounded-[2px] border-2 transition-all duration-300 ${active

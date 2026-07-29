@@ -64,3 +64,39 @@ export const education: TimelineItem[] = [
     current: true,
   },
 ]
+
+
+export const STACK_GROUPS = [
+  {
+    label: 'FRONTEND',
+    items: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
+  },
+  {
+    label: 'BACKEND & DB',
+    items: ['Firebase', 'Firestore', 'Node.js'],
+  },
+  {
+    label: 'TOOLS',
+    items: ['Git', 'Figma', 'VS Code'],
+  },
+]
+
+export const MINDSET_CARDS = [
+  { icon: 'ti-code', label: 'Clean structure' },
+  { icon: 'ti-palette', label: 'Distinctive design' },
+  { icon: 'ti-users', label: 'Real user needs' },
+  { icon: 'ti-trending-up', label: 'Built to scale' },
+]
+
+export const PERSPECTIVE_ITEMS = {
+  dev: [
+    { icon: 'ti-code', text: 'Clean, readable, scalable code' },
+    { icon: 'ti-layers', text: 'Architecture with a direction' },
+    { icon: 'ti-refresh', text: 'Reusable components, maintainable systems' },
+  ],
+  user: [
+    { icon: 'ti-hand-click', text: 'Intuitive, no explanation needed' },
+    { icon: 'ti-sparkles', text: 'Design that has character, not generic' },
+    { icon: 'ti-heart', text: 'Feels good to use in the real world' },
+  ],
+}
