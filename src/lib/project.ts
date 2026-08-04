@@ -13,7 +13,6 @@ export const featuredCaseStudy: CaseStudyPreview = {
 export type Project = {
   id: string;
   title: string;
-  hook: string;
   description: string;
   tech: string[];
   year: number;
@@ -26,7 +25,6 @@ export const projects: Project[] = [
   {
     id: "aryaem",
     title: "Aryaem",
-    hook: "Protfoli website",
     description: "The website you're looking at.",
     tech: ["Next.js 15", "Tailwind CSS", "Framer Motion", "TypeScript"],
     year: 2026,
@@ -37,7 +35,6 @@ export const projects: Project[] = [
   {
     id: "divelight",
     title: "DiveLight",
-    hook: "Ive Gallery",
     description: "A visual-first Ive gallery, built to explore how far aesthetic and layout can carry user experience.",
     tech: ["Next.js", "Firebase", "Tailwind CSS", "TypeScript", "Framer Motion"],
     year: 2025,
@@ -47,7 +44,6 @@ export const projects: Project[] = [
   {
     id: "lunvera",
     title: "Lunvera",
-    hook: "Learn UI design by seeing the difference.",
     description: "Design learning platform focused on real world comparison examples.",
     tech: ["Next.js 15", "Tailwind CSS", "TypeScript"],
     year: 2026,
@@ -58,7 +54,6 @@ export const projects: Project[] = [
   {
     id: "cashflo",
     title: "Cashflo",
-    hook: "Track money effortlessly with visual clarity.",
     description: "Expense tracker app with real time dynamic analytics & charts.",
     tech: ["Next.js 15", "Tailwind CSS", "TypeScript"],
     year: 2025,
@@ -68,7 +63,6 @@ export const projects: Project[] = [
   {
     id: "margin",
     title: "Margin",
-    hook: "Helps you track your reading progress",
     description: "Reading tracker meets mini book club, personal habit and social interaction in one platform.",
     tech: ["Next.js", "Firebase", "Tailwind CSS", "TypeScript", "Framer Motion"],
     year: 2025,
@@ -78,7 +72,6 @@ export const projects: Project[] = [
   {
     id: "moodly",
     title: "Moodly",
-    hook: "Track your daily emotion and mind flow.",
     description: "Mood tracking web app integrated with AI sentiment insights.",
     tech: ["Next.js", "Firebase", "Tailwind CSS", "TypeScript"],
     year: 2025,

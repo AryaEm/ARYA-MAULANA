@@ -35,7 +35,7 @@ export const DIRECT_LINKS = [
   },
   {
     label: "WhatsApp",
-    value: "+62 812-XXXX-XXXX",
+    value: "+62 818-XXXX-XXXX",
     href: "https://wa.me/6281804748037",
     icon: "ti-brand-whatsapp",
     badge: "Fastest",

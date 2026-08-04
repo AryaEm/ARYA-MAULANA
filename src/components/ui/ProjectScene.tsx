@@ -45,10 +45,6 @@ export default function ProjectScene({ project, index, total }: ProjectSceneProp
                         <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-[var(--color-ink)] font-display h-fit">
                             {project.title}
                         </h2>
-
-                        <p className="text-sm font-medium leading-relaxed text-[var(--color-ink)]/50 h-fit leading-tight py-2 px-4 bg-zinc-700/20 rounded-lg">
-                            {project.hook}
-                        </p>
                     </div>
 
                     <p className="text-sm text-[var(--color-ink-dim)] leading-relaxed">

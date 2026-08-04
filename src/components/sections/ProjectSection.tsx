@@ -52,7 +52,7 @@ export default function ProjectSection() {
                 </div>
 
                 {/* Navigation Arrows */}
-                <div className="hidden sm:flex items-center gap-2">
+                <div className="flex items-center gap-2">
                     <button
                         onClick={() => scrollToSlide(Math.max(0, activeIndex - 1))}
                         disabled={activeIndex === 0}
