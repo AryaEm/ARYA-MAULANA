@@ -69,11 +69,11 @@ export default function ContactSection() {
       <div className="absolute inset-0 z-0 opacity-65 pointer-events-none" aria-hidden="true">
         <LaserFlow
           color="#e91e8c"
-          horizontalBeamOffset={0.4} // Digeser sedikit ke kiri (di atas teks headline)
-          verticalBeamOffset={-0.35}   // Digeser NAIK ke atas agar tidak menutupi kartu kontak
+          horizontalBeamOffset={0.3}
+          verticalBeamOffset={-0.35}
           wispDensity={0.6}
-          wispIntensity={3}            // Diturunkan sedikit agar tidak terlalu dominan
-          fogIntensity={0.25}          // Fog diperlembut
+          wispIntensity={4}
+          fogIntensity={0.30}
           fogScale={0.28}
           flowSpeed={0.3}
           decay={1.2}
@@ -145,7 +145,6 @@ export default function ContactSection() {
                     </span>
                   </div>
 
-                  {/* Actions */}
                   <div className="flex gap-1.25 shrink-0">
                     {item.label === 'Email' && (
                       <button
@@ -162,6 +161,15 @@ export default function ContactSection() {
                         )}
                       </button>
                     )}
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-7.5 h-7.5 rounded-md border border-white/[0.08] bg-transparent flex items-center justify-center text-[#f0e8f0]/30 transition-all duration-200 hover:border-[#e91e8c]/35 hover:text-[#e91e8c] hover:bg-[#e91e8c]/10"
+                      aria-label={`Open ${item.label}`}
+                    >
+                      <ArrowUpRight size={13} />
+                    </a>
                   </div>
                 </div>
               ))}

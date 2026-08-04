@@ -29,14 +29,14 @@ export const DIRECT_LINKS = [
   {
     label: "Email",
     value: "ary4maulanaa@email.com",
-    href: "mailto:ary4maulanaa@email.com",
+    // href: "mailto:ary4maulanaa@email.com",
     icon: "ti-mail",
     badge: "Primary",
   },
   {
     label: "WhatsApp",
     value: "+62 812-XXXX-XXXX",
-    href: "https://wa.me/62812XXXXXXXX",
+    href: "https://wa.me/6281804748037",
     icon: "ti-brand-whatsapp",
     badge: "Fastest",
   },
