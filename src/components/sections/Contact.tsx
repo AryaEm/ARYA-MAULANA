@@ -80,7 +80,7 @@ export default function ContactSection() {
         />
       </div>
 
-      <div className="relative z-10 max-w-[1200px] mx-auto w-full px-5 py-18 md:px-8 md:py-12 flex flex-col gap-10">
+      <div className="relative z-10 max-w-[1200px] mx-auto w-full px-5 py-16 md:px-8 md:py-16 flex flex-col gap-10">
         <div className="flex items-center gap-2.5" aria-hidden="true">
           <span className="text-[10px] font-mono text-[#e91e8c] tracking-[0.18em]">
             CONTACT
