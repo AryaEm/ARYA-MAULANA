@@ -61,7 +61,7 @@ export default function ContactSection() {
     <section
       ref={sectionRef}
       id="contact"
-      className="relative min-h-dvh flex flex-col justify-center border-t border-[#e91e8c]/15 overflow-hidden"
+      className="relative min-h-dvh flex flex-col justify-center border-t border-[#e91e8c]/15"
       aria-labelledby="contact-heading"
       onMouseMove={handleMouseMove}
       onMouseLeave={() => setMousePos({ x: -9999, y: -9999 })}
@@ -69,11 +69,11 @@ export default function ContactSection() {
       <div className="absolute inset-0 z-0 opacity-65 pointer-events-none" aria-hidden="true">
         <LaserFlow
           color="#e91e8c"
-          horizontalBeamOffset={0.10}
-          verticalBeamOffset={0.0}
-          wispDensity={0.8}
-          wispIntensity={4}
-          fogIntensity={0.35}
+          horizontalBeamOffset={0.4} // Digeser sedikit ke kiri (di atas teks headline)
+          verticalBeamOffset={-0.35}   // Digeser NAIK ke atas agar tidak menutupi kartu kontak
+          wispDensity={0.6}
+          wispIntensity={3}            // Diturunkan sedikit agar tidak terlalu dominan
+          fogIntensity={0.25}          // Fog diperlembut
           fogScale={0.28}
           flowSpeed={0.3}
           decay={1.2}
@@ -117,7 +117,7 @@ export default function ContactSection() {
               {DIRECT_LINKS.map((item) => (
                 <div
                   key={item.label}
-                  className="group flex items-center gap-3 p-3.5 sm:px-4 rounded-xl border border-white/[0.07] bg-white/[0.03] backdrop-blur-md transition-all duration-200 hover:border-[#e91e8c]/35 hover:bg-[#e91e8c]/[0.05] hover:-translate-y-0.5"
+                  className="group flex cursor-pointer items-center gap-3 p-3.5 sm:px-4 rounded-xl border border-white/[0.07] bg-white/[0.03] backdrop-blur-md transition-all duration-200 hover:border-[#e91e8c]/35 hover:bg-[#e91e8c]/[0.05] hover:-translate-y-0.5"
                   role="listitem"
                 >
                   {/* Icon */}
@@ -170,8 +170,8 @@ export default function ContactSection() {
             {/* Copy Toast */}
             <div
               className={`flex items-center justify-center gap-1.5 py-2 px-4 rounded-md text-[11px] font-mono text-green-400 bg-green-400/10 border border-green-400/20 transition-all duration-250 pointer-events-none ${copied
-                  ? 'opacity-100 translate-y-0'
-                  : 'opacity-0 -translate-y-1.5'
+                ? 'opacity-100 translate-y-0'
+                : 'opacity-0 -translate-y-1.5'
                 }`}
               role="status"
               aria-live="polite"
@@ -183,10 +183,7 @@ export default function ContactSection() {
         </div>
 
         {/* Footer Meta */}
-        <div className="flex items-center justify-between pt-6 border-t border-white/[0.06] flex-wrap gap-3">
-          <span className="text-[11px] font-mono text-[#f0e8f0]/25">
-            response time: <span className="text-[#e91e8c]">under 24h</span>
-          </span>
+        <div className="flex items-center justify-start pt-12  flex-wrap gap-3">
           <span className="text-[10px] font-mono text-[#f0e8f0]/20">
             © 2026 Arya Maulana
           </span>

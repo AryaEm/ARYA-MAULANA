@@ -44,6 +44,14 @@ button {
   cursor: pointer;
 }
 
+a {
+  cursor: pointer;
+}
+
+Link {
+  cursor: pointer;
+}
+
 .masonry {
   column-gap: 0.8rem;
 }
