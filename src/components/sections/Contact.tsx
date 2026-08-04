@@ -66,7 +66,6 @@ export default function ContactSection() {
       onMouseMove={handleMouseMove}
       onMouseLeave={() => setMousePos({ x: -9999, y: -9999 })}
     >
-      {/* Laser Background */}
       <div className="absolute inset-0 z-0 opacity-65 pointer-events-none" aria-hidden="true">
         <LaserFlow
           color="#e91e8c"
@@ -81,10 +80,8 @@ export default function ContactSection() {
         />
       </div>
 
-      <div className="relative z-10 max-w-[1200px] mx-auto w-full px-5 py-16 md:px-8 md:py-12 flex flex-col gap-10">
-        {/* Contact Tag */}
+      <div className="relative z-10 max-w-[1200px] mx-auto w-full px-5 py-18 md:px-8 md:py-12 flex flex-col gap-10">
         <div className="flex items-center gap-2.5" aria-hidden="true">
-          <span className="block h-[0.5px] w-7 bg-[#e91e8c] shrink-0" />
           <span className="text-[10px] font-mono text-[#e91e8c] tracking-[0.18em]">
             CONTACT
           </span>
@@ -92,7 +89,6 @@ export default function ContactSection() {
 
         {/* Layout Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
-          {/* LEFT — Headline & Status */}
           <div className="flex flex-col gap-6">
             <h2
               id="contact-heading"
