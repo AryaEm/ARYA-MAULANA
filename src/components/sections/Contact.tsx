@@ -80,7 +80,7 @@ export default function ContactSection() {
         />
       </div>
 
-      <div className="relative z-10 max-w-[1200px] mx-auto w-full px-5 py-16 md:px-8 md:py-16 flex flex-col gap-10">
+      <div className="relative z-10 max-w-[1200px] mx-auto w-full px-5 pt-16 pb-16 md:px-8 md:pt-16 md:pb-14 flex flex-col gap-10">
         <div className="flex items-center gap-2.5" aria-hidden="true">
           <span className="text-[10px] font-mono text-[#e91e8c] tracking-[0.18em]">
             CONTACT
@@ -103,22 +103,6 @@ export default function ContactSection() {
               Have a project in mind, a puzzle that needs solving,
               or just want to talk about tech, I&apos;m always open.
             </p>
-
-            {/* Status + Clock */}
-            <div className="flex items-center justify-between px-3.5 py-2.5 rounded-lg bg-white/[0.03] border border-white/[0.08] font-mono text-xs gap-4">
-              <div className="flex items-center gap-1.75">
-                <span className="w-1.75 h-1.75 rounded-full bg-green-400 shrink-0 animate-pulse" aria-hidden="true" />
-                <span className="text-green-400/85 text-[11px]">Open to work &amp; collaboration</span>
-              </div>
-              <div
-                className="flex items-center gap-1.25 text-[#f0e8f0]/30 text-[10px] shrink-0"
-                aria-label={`Current time in Malang: ${timeString} WIB`}
-              >
-                <Clock size={11} />
-                <span>{timeString || '00:00:00'}</span>
-                <span className="text-[#f0e8f0]/20">WIB</span>
-              </div>
-            </div>
 
             {/* Location */}
             <div className="flex items-center gap-1.5 text-[11px] font-mono text-[#f0e8f0]/35">
@@ -178,15 +162,6 @@ export default function ContactSection() {
                         )}
                       </button>
                     )}
-                    <a
-                      href={item.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-7.5 h-7.5 rounded-md border border-white/[0.08] bg-transparent flex items-center justify-center text-[#f0e8f0]/30 transition-all duration-200 hover:border-[#e91e8c]/35 hover:text-[#e91e8c] hover:bg-[#e91e8c]/10"
-                      aria-label={`Open ${item.label}`}
-                    >
-                      <ArrowUpRight size={13} />
-                    </a>
                   </div>
                 </div>
               ))}
@@ -194,11 +169,10 @@ export default function ContactSection() {
 
             {/* Copy Toast */}
             <div
-              className={`flex items-center justify-center gap-1.5 py-2 px-4 rounded-md text-[11px] font-mono text-green-400 bg-green-400/10 border border-green-400/20 transition-all duration-250 pointer-events-none ${
-                copied
+              className={`flex items-center justify-center gap-1.5 py-2 px-4 rounded-md text-[11px] font-mono text-green-400 bg-green-400/10 border border-green-400/20 transition-all duration-250 pointer-events-none ${copied
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 -translate-y-1.5'
-              }`}
+                }`}
               role="status"
               aria-live="polite"
             >
@@ -214,7 +188,7 @@ export default function ContactSection() {
             response time: <span className="text-[#e91e8c]">under 24h</span>
           </span>
           <span className="text-[10px] font-mono text-[#f0e8f0]/20">
-            © 2025 Arya Maulana
+            © 2026 Arya Maulana
           </span>
         </div>
       </div>
