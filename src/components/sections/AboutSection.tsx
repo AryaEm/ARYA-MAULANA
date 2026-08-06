@@ -1,11 +1,12 @@
+'use client'
+
 import ChapterBlock from '@/components/ui/ChapterBlock'
-import AboutAside from '../ui/AboutAside'
+import Lanyard from '@/components/ui/Lanyard' 
 import { STACK_GROUPS, MINDSET_CARDS, PERSPECTIVE_ITEMS } from '@/lib/about'
 
 export default function AboutSection() {
   return (
     <section id="about" className="w-full max-w-[1100px] mx-auto px-6 mt-16 text-zinc-200 font-sans">
-
       <div className="mb-6">
         <div className="flex items-center gap-3 font-mono text-[11px] text-[var(--color-accent)] tracking-widest uppercase">
           <span>About</span>
@@ -13,7 +14,7 @@ export default function AboutSection() {
       </div>
 
       {/* Main Layout Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_310px] gap-12 lg:gap-6 items-start relative">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-12 lg:gap-8 items-start relative">
 
         {/* LEFT COLUMN: Timeline Chapters */}
         <div className="scroll-container relative p-4 max-h-[calc(100vh-10rem)] overflow-y-auto overscroll-contain">
@@ -22,6 +23,7 @@ export default function AboutSection() {
             aria-hidden="true"
             className="absolute left-4 top-2 bottom-2 w-[1px] bg-gradient-to-b from-[var(--color-accent)]/40 via-zinc-800 to-transparent"
           />
+          
           {/* CHAPTER 01 */}
           <ChapterBlock
             num="01 / origin"
@@ -52,7 +54,7 @@ export default function AboutSection() {
               I always think from two sides at once: as a <em>developer</em> who cares about clean structure and architecture, and as a <em>user</em> who wants things to feel simple and real.
             </p>
 
-            {/* Mindset Cards Grid - Perbaikan Typo bg-zinc-/80 -> bg-zinc-900/80 */}
+            {/* Mindset Cards Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-4">
               {MINDSET_CARDS.map((c) => (
                 <div
@@ -78,7 +80,6 @@ export default function AboutSection() {
 
             {/* Duality Box */}
             <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr] bg-zinc-900 border border-zinc-800/80 rounded-lg overflow-hidden mt-4">
-
               {/* Developer Side */}
               <div className="p-4 space-y-3">
                 <div className="font-mono text-[10px] text-[var(--color-accent)] tracking-wider">// as a developer</div>
@@ -143,9 +144,15 @@ export default function AboutSection() {
           </ChapterBlock>
         </div>
 
-        {/* RIGHT COLUMN: Sticky Identity Card (Selesai Diperbaiki) */}
-        <AboutAside />
-
+        {/* RIGHT COLUMN: Interactive 3D Lanyard Card */}
+        <aside className="w-full lg:sticky lg:top-24 h-[550px] sm:h-[650px] flex items-center justify-center rounded-2xl bg-zinc-900/40 border border-zinc-800/80 backdrop-blur-sm overflow-hidden relative">
+          <Lanyard 
+            position={[0, 0, 20]} 
+            gravity={[0, -40, 0]} 
+            fov={20}
+            transparent={true}
+          />
+        </aside>
 
       </div>
     </section>

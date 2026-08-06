@@ -47,7 +47,7 @@ export const projects: Project[] = [
     description: "Design learning platform focused on real world comparison examples.",
     tech: ["Next.js 15", "Tailwind CSS", "TypeScript"],
     year: 2026,
-    demoUrl: "https://lunvera.vercel.app",
+    demoUrl: "https://lunveraa.vercel.app",
     githubUrl: "https://github.com/aryaEm/lunvera",
     image: "/lunveraa.png",
   },
@@ -66,7 +66,7 @@ export const projects: Project[] = [
     description: "Reading tracker meets mini book club, personal habit and social interaction in one platform.",
     tech: ["Next.js", "Firebase", "Tailwind CSS", "TypeScript", "Framer Motion"],
     year: 2025,
-    demoUrl: "https://divelight.vercel.app/",
+    demoUrl: "https://margin-book.vercel.app/",
     image: "/margin.png",
   },
   {
