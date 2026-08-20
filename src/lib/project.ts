@@ -86,5 +86,6 @@ export const projects: Project[] = [
     year: 2026,
     demoUrl: "https://fotookitablurr.vercel.app/",
     githubUrl: "https://github.com/AryaEm/gesture-blur-cam",
+    image: "/blurrr.png",
   },
 ];
