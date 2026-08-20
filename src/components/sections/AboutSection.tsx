@@ -6,7 +6,7 @@ import { STACK_GROUPS, MINDSET_CARDS, PERSPECTIVE_ITEMS } from '@/lib/about'
 
 export default function AboutSection() {
   return (
-    <section id="about" className="w-full max-w-[1100px] mx-auto px-6 mt-16 text-zinc-200 font-sans">
+    <section id="about" className="w-full max-w-[1100px] mx-auto px-6 mt-16 md:mt-4 text-zinc-200 font-sans">
       <div className="mb-6">
         <div className="flex items-center gap-3 font-mono text-[11px] text-[var(--color-accent)] tracking-widest uppercase">
           <span>About</span>
