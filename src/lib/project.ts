@@ -78,4 +78,13 @@ export const projects: Project[] = [
     demoUrl: "https://mood-ly.vercel.app/",
     githubUrl: "https://github.com/AryaEm/moodly",
   },
+  {
+    id: "fotokitablur",
+    title: "Foto Kita Blurrr",
+    description: "Orang lain pake python buat ngoding serius, gw pake MediaPipe buat ngeblur muka gara-gara ikut tren TikTok awokaokwoakw.",
+     tech: ["Next.js", "Tailwind CSS", "TypeScript", "MediaPipe"],
+    year: 2026,
+    demoUrl: "https://fotookitablurr.vercel.app/",
+    githubUrl: "https://github.com/AryaEm/gesture-blur-cam",
+  },
 ];
