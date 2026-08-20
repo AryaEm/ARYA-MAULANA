@@ -6,7 +6,7 @@ import { STACK_GROUPS, MINDSET_CARDS, PERSPECTIVE_ITEMS } from '@/lib/about'
 
 export default function AboutSection() {
   return (
-    <section id="about" className="w-full max-w-[1100px] mx-auto px-6 mt-16 md:mt-4 text-zinc-200 font-sans">
+    <section id="about" className="w-full max-w-[1100px] mx-auto px-6 md:mt-16 mt-10 text-zinc-200 font-sans">
       <div className="mb-6">
         <div className="flex items-center gap-3 font-mono text-[11px] text-[var(--color-accent)] tracking-widest uppercase">
           <span>About</span>
@@ -132,7 +132,7 @@ export default function AboutSection() {
           </ChapterBlock>
         </div>
 
-        <aside className="w-full lg:sticky lg:top-24 h-[550px] sm:h-[650px] hidden items-center justify-center rounded-2xl bg-zinc-900/40 border border-zinc-800/80 backdrop-blur-sm overflow-hidden relative">
+        <aside className="w-full lg:sticky lg:block lg:top-24 h-[550px] sm:h-[650px] hidden items-center justify-center rounded-2xl bg-zinc-900/40 border border-zinc-800/80 backdrop-blur-sm overflow-hidden relative">
           <Lanyard
             position={[0, 0, 20]}
             gravity={[0, -40, 0]}

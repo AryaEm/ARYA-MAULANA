@@ -41,7 +41,7 @@ export default function ProjectSection() {
     };
 
     return (
-        <div className="relative w-full max-w-6xl mx-auto flex min-h-[85vh] flex-col justify-between rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)]/70 backdrop-blur-xl overflow-hidden shadow-2xl lg:my-10">
+        <div className="relative w-full max-w-6xl mx-auto flex min-h-[85vh] mt-20 md:mt-0 flex-col justify-between rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)]/70 backdrop-blur-xl overflow-hidden shadow-2xl lg:my-10">
             {/* Header Bar */}
             <div className="px-8 flex items-center justify-between border-b border-[var(--color-border-soft)]">
                 <div className="flex py-6 items-center gap-2.5">

@@ -23,7 +23,7 @@ export default function HomeView({ onNavigate }: { onNavigate: (tab: TabId) => v
         <StatusCard />
         <SnakeGameCard />
       </div>
-      <div className="masonry overflow-hidden columns-1 sm:columns-2 lg:columns-3 md:h-full block md:hidden">
+      <div className="masonry overflow-hidden columns-1 sm:columns-2 lg:columns-3 md:h-full block md:hidden mt-20">
         <ProfileCard />
         <HeroCard onNavigate={onNavigate} />
         <ResumeCard />

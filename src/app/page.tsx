@@ -35,7 +35,7 @@ export default function Home() {
   };
 
   return (
-    <main className="relative mx-auto justify-center flex w-full max-w-6xl flex-col px-3 pb-3 pt-20 sm:pb-0 sm:px-8 sm:pt-0">
+    <main className="relative mx-auto justify-center flex w-full max-w-6xl flex-col px-3 pb-3 pt-0 sm:pb-0 sm:px-8 sm:pt-0">
       <Sidebar activeTab={activeTab} onChange={setActiveTab} />
       <MobileNav activeTab={activeTab} onChange={setActiveTab} />
 
