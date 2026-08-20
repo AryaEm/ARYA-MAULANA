@@ -64,7 +64,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                     </span>
                 </div>
 
-                <p className="text-sm text-[var(--color-ink-dim)] leading-relaxed">
+                <p className="text-sm text-[var(--color-ink-dim)] leading-relaxed text-justify">
                     {project.description}
                 </p>
 

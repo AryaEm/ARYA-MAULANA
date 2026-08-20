@@ -16,7 +16,7 @@ export default function ProjectSection() {
                 </div>
 
                 <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-                    <h2 className="font-display font-black uppercase leading-[0.85] tracking-tight text-[var(--color-ink)] text-[clamp(2.75rem,9vw,5.5rem)]">
+                    <h2 className="font-display font-black uppercase leading-[0.85] tracking-tight text-[var(--color-ink)] text-[clamp(2.75rem,9vw,8.5rem)]">
                         Projects
                     </h2>
                     <p className="max-w-xs text-sm text-[var(--color-ink-dim)] leading-relaxed md:text-right md:pb-2">
