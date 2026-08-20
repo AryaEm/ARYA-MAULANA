@@ -61,7 +61,7 @@ export default function ContactSection() {
     <section
       ref={sectionRef}
       id="contact"
-      className="relative min-h-dvh flex flex-col justify-center border-t border-[#e91e8c]/15"
+      className="relative min-h-dvh flex flex-col justify-center"
       aria-labelledby="contact-heading"
       onMouseMove={handleMouseMove}
       onMouseLeave={() => setMousePos({ x: -9999, y: -9999 })}
@@ -80,7 +80,7 @@ export default function ContactSection() {
         />
       </div>
 
-      <div className="relative z-10 max-w-[1200px] mx-auto w-full px-5 pt-16 pb-16 md:px-8 md:pt-16 md:pb-14 flex flex-col gap-10">
+      <div className="relative z-10 max-w-[1200px] mx-auto w-full px-5 pt-4 pb-16 md:px-8 md:pt-16 md:pb-14 flex flex-col gap-10">
         <div className="flex items-center gap-2.5" aria-hidden="true">
           <span className="text-[10px] font-mono text-[#e91e8c] tracking-[0.18em]">
             CONTACT
