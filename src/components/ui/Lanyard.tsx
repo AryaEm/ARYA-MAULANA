@@ -16,11 +16,11 @@ import { MeshLineGeometry, MeshLineMaterial } from 'meshline';
 import * as THREE from 'three';
 
 // import lanyardPng from './lanyard.png';
-const lanyardPng = './lanyard.png'
+const lanyardPng = './Lanyard.png'
 
 // Path langsung ke folder public
 const cardPath = '/card.glb';
-const lanyardPath = typeof lanyardPng === 'string' ? lanyardPng : (lanyardPng as any)?.src || '/lanyard.png';
+const lanyardPath = typeof lanyardPng === 'string' ? lanyardPng : (lanyardPng as any)?.src || '/Lanyard.png';
 
 extend({ MeshLineGeometry, MeshLineMaterial });
 
@@ -175,11 +175,11 @@ function Band({
   };
 
   const { nodes, materials } = useGLTF(cardPath) as any;
-  
+
   // Memastikan path bertipe string murni agar useTexture tidak error
   const texturePath = lanyardImage || lanyardPath;
   const texture = useTexture(texturePath) as THREE.Texture;
-  
+
   const frontTex = useTexture(frontImage || BLANK_PIXEL) as THREE.Texture;
   const backTex = useTexture(backImage || BLANK_PIXEL) as THREE.Texture;
 
@@ -252,32 +252,36 @@ function Band({
   }, [hovered, dragged]);
 
   useFrame((state, delta) => {
+    if (!fixed.current || !j1.current || !j2.current || !j3.current || !card.current || !band.current) return;
+
     if (dragged && typeof dragged !== 'boolean') {
       vec.set(state.pointer.x, state.pointer.y, 0.5).unproject(state.camera);
       dir.copy(vec).sub(state.camera.position).normalize();
       vec.add(dir.multiplyScalar(state.camera.position.length()));
       [card, j1, j2, j3, fixed].forEach(ref => ref.current?.wakeUp());
-      card.current?.setNextKinematicTranslation({
+      card.current.setNextKinematicTranslation({
         x: vec.x - dragged.x,
         y: vec.y - dragged.y,
         z: vec.z - dragged.z
       });
     }
-    if (fixed.current) {
-      [j1, j2].forEach(ref => {
-        const lerped = getLerped(ref.current);
-        const clampedDistance = Math.max(0.1, Math.min(1, lerped.distanceTo(ref.current.translation())));
-        lerped.lerp(ref.current.translation(), delta * (minSpeed + clampedDistance * (maxSpeed - minSpeed)));
-      });
-      curve.points[0].copy(j3.current.translation());
-      curve.points[1].copy(getLerped(j2.current));
-      curve.points[2].copy(getLerped(j1.current));
-      curve.points[3].copy(fixed.current.translation());
-      band.current.geometry.setPoints(curve.getPoints(isMobile ? 16 : 32));
-      ang.copy(card.current.angvel());
-      rot.copy(card.current.rotation());
-      card.current.setAngvel({ x: ang.x, y: ang.y - rot.y * 0.25, z: ang.z }, true);
-    }
+
+    [j1, j2].forEach(ref => {
+      if (!ref.current) return;
+      const lerped = getLerped(ref.current);
+      const clampedDistance = Math.max(0.1, Math.min(1, lerped.distanceTo(ref.current.translation())));
+      lerped.lerp(ref.current.translation(), delta * (minSpeed + clampedDistance * (maxSpeed - minSpeed)));
+    });
+
+    curve.points[0].copy(j3.current.translation());
+    curve.points[1].copy(getLerped(j2.current));
+    curve.points[2].copy(getLerped(j1.current));
+    curve.points[3].copy(fixed.current.translation());
+    band.current.geometry.setPoints(curve.getPoints(isMobile ? 16 : 32));
+
+    ang.copy(card.current.angvel());
+    rot.copy(card.current.rotation());
+    card.current.setAngvel({ x: ang.x, y: ang.y - rot.y * 0.25, z: ang.z }, true);
   });
 
   curve.curveType = 'chordal';
