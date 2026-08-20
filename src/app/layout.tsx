@@ -22,9 +22,9 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: ">_Arya Maulana",
+  title: ">_Aryaem",
   description:
-    "Product-Minded Frontend Engineer bridging backend efficiency with pixel-perfect visual fidelity.",
+    "Arya Maulana's Personal Web, A Product-Minded Frontend Engineer bridging backend efficiency with pixel-perfect visual fidelity.",
 };
 
 export default function RootLayout({
