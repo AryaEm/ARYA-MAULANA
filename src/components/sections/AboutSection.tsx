@@ -1,7 +1,7 @@
 'use client'
 
 import ChapterBlock from '@/components/ui/ChapterBlock'
-import Lanyard from '@/components/ui/Lanyard' 
+import Lanyard from '@/components/ui/Lanyard'
 import { STACK_GROUPS, MINDSET_CARDS, PERSPECTIVE_ITEMS } from '@/lib/about'
 
 export default function AboutSection() {
@@ -13,18 +13,14 @@ export default function AboutSection() {
         </div>
       </div>
 
-      {/* Main Layout Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-12 lg:gap-8 items-start relative">
 
-        {/* LEFT COLUMN: Timeline Chapters */}
         <div className="scroll-container relative p-4 max-h-[calc(100vh-10rem)] overflow-y-auto overscroll-contain">
-          {/* Vertical Line */}
           <div
             aria-hidden="true"
             className="absolute left-4 top-2 bottom-2 w-[1px] bg-gradient-to-b from-[var(--color-accent)]/40 via-zinc-800 to-transparent"
           />
-          
-          {/* CHAPTER 01 */}
+
           <ChapterBlock
             num="01 / origin"
             title={<>Started with <span className="acc">"I wonder how..."</span></>}
@@ -41,7 +37,6 @@ export default function AboutSection() {
             </p>
           </ChapterBlock>
 
-          {/* CHAPTER 02 */}
           <ChapterBlock
             num="02 / mindset"
             title={<>Not <span className="acc">"as long as it works"</span></>}
@@ -54,7 +49,6 @@ export default function AboutSection() {
               I always think from two sides at once: as a <em>developer</em> who cares about clean structure and architecture, and as a <em>user</em> who wants things to feel simple and real.
             </p>
 
-            {/* Mindset Cards Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-4">
               {MINDSET_CARDS.map((c) => (
                 <div
@@ -68,7 +62,6 @@ export default function AboutSection() {
             </div>
           </ChapterBlock>
 
-          {/* CHAPTER 03 */}
           <ChapterBlock
             num="03 / perspective"
             title={<>Always thinking <span className="acc">both sides.</span></>}
@@ -78,9 +71,7 @@ export default function AboutSection() {
               <em>direction and a foundation to grow from.</em>
             </p>
 
-            {/* Duality Box */}
             <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr] bg-zinc-900 border border-zinc-800/80 rounded-lg overflow-hidden mt-4">
-              {/* Developer Side */}
               <div className="p-4 space-y-3">
                 <div className="font-mono text-[10px] text-[var(--color-accent)] tracking-wider">// as a developer</div>
                 <div className="font-sans font-semibold text-xs text-zinc-100">Think in systems.</div>
@@ -94,7 +85,6 @@ export default function AboutSection() {
                 </div>
               </div>
 
-              {/* Bridge Divider */}
               <div aria-hidden="true" className="hidden sm:flex flex-col items-center justify-between py-3 px-1">
                 <div className="w-1 h-1 rounded-full bg-[var(--color-accent)]/50" />
                 <div className="w-[1px] flex-1 bg-zinc-800" />
@@ -103,7 +93,6 @@ export default function AboutSection() {
                 <div className="w-1 h-1 rounded-full bg-[var(--color-accent)]/50" />
               </div>
 
-              {/* User Side */}
               <div className="p-4 space-y-3 border-t sm:border-t-0 border-zinc-800">
                 <div className="font-mono text-[10px] text-indigo-400 tracking-wider">// as a user</div>
                 <div className="font-sans font-semibold text-xs text-zinc-100">Feel the product.</div>
@@ -119,7 +108,6 @@ export default function AboutSection() {
             </div>
           </ChapterBlock>
 
-          {/* CHAPTER 04 */}
           <ChapterBlock
             num="04 / stack"
             title={<>Tools I <span className="acc">work with.</span></>}
@@ -145,9 +133,9 @@ export default function AboutSection() {
         </div>
 
         <aside className="w-full lg:sticky lg:top-24 h-[550px] sm:h-[650px] flex items-center justify-center rounded-2xl bg-zinc-900/40 border border-zinc-800/80 backdrop-blur-sm overflow-hidden relative">
-          <Lanyard 
-            position={[0, 0, 20]} 
-            gravity={[0, -40, 0]} 
+          <Lanyard
+            position={[0, 0, 20]}
+            gravity={[0, -40, 0]}
             fov={20}
             transparent={true}
           />

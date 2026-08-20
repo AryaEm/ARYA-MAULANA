@@ -13,14 +13,25 @@ interface Props {
 
 export default function HomeView({ onNavigate }: { onNavigate: (tab: TabId) => void }) {
   return (
-    <div className="masonry overflow-hidden columns-1 sm:columns-2 lg:columns-3 md:h-full">
-      <HeroCard onNavigate={onNavigate} />
-      <ResumeCard />
-      <ProfileCard />
-      <CaseStudyHighlightCard onOpen={() => onNavigate("projects")} />
-      <AboutSnapshotCard />
-      <StatusCard />
-      <SnakeGameCard />
-    </div>
+    <>
+      <div className="masonry overflow-hidden columns-1 sm:columns-2 lg:columns-3 md:h-full hidden md:block">
+        <HeroCard onNavigate={onNavigate} />
+        <ResumeCard />
+        <ProfileCard />
+        <CaseStudyHighlightCard onOpen={() => onNavigate("projects")} />
+        <AboutSnapshotCard />
+        <StatusCard />
+        <SnakeGameCard />
+      </div>
+      <div className="masonry overflow-hidden columns-1 sm:columns-2 lg:columns-3 md:h-full block md:hidden">
+        <ProfileCard />
+        <HeroCard onNavigate={onNavigate} />
+        <ResumeCard />
+        <CaseStudyHighlightCard onOpen={() => onNavigate("projects")} />
+        <AboutSnapshotCard />
+        <StatusCard />
+        <SnakeGameCard />
+      </div>
+    </>
   );
 }

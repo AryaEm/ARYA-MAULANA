@@ -15,8 +15,8 @@ import {
 import { MeshLineGeometry, MeshLineMaterial } from 'meshline';
 import * as THREE from 'three';
 
-// Import lanyard PNG statis
-import lanyardPng from './lanyard.png';
+// import lanyardPng from './lanyard.png';
+const lanyardPng = './lanyard.png'
 
 // Path langsung ke folder public
 const cardPath = '/card.glb';
