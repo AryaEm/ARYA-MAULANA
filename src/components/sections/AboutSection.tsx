@@ -132,7 +132,7 @@ export default function AboutSection() {
           </ChapterBlock>
         </div>
 
-        <aside className="w-full lg:sticky lg:top-24 h-[550px] sm:h-[650px] flex items-center justify-center rounded-2xl bg-zinc-900/40 border border-zinc-800/80 backdrop-blur-sm overflow-hidden relative">
+        <aside className="w-full lg:sticky lg:top-24 h-[550px] sm:h-[650px] hidden items-center justify-center rounded-2xl bg-zinc-900/40 border border-zinc-800/80 backdrop-blur-sm overflow-hidden relative">
           <Lanyard
             position={[0, 0, 20]}
             gravity={[0, -40, 0]}
