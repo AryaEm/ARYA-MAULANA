@@ -77,6 +77,7 @@ export const projects: Project[] = [
     year: 2026,
     demoUrl: "https://mood-ly.vercel.app/",
     githubUrl: "https://github.com/AryaEm/moodly",
+    image: "/moodly.png",
   },
   {
     id: "fotokitablur",
