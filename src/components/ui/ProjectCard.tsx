@@ -53,7 +53,6 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 )}
             </div>
 
-            {/* Content */}
             <div className="p-5 flex flex-col gap-3">
                 <div className="flex items-center justify-between gap-2">
                     <h3 className="text-lg font-bold tracking-tight text-[var(--color-ink)] font-display">

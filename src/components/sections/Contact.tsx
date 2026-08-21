@@ -87,7 +87,6 @@ export default function ContactSection() {
           </span>
         </div>
 
-        {/* Layout Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
           <div className="flex flex-col gap-6">
             <h2
@@ -104,14 +103,12 @@ export default function ContactSection() {
               or just want to talk about tech, I&apos;m always open.
             </p>
 
-            {/* Location */}
             <div className="flex items-center gap-1.5 text-[11px] font-mono text-[#f0e8f0]/35">
               <MapPin size={13} className="text-[#e91e8c] shrink-0" />
               <span>Malang, Indonesia</span>
             </div>
           </div>
 
-          {/* RIGHT — Channel Cards */}
           <div className="flex flex-col gap-2">
             <div className="flex flex-col gap-2" role="list">
               {DIRECT_LINKS.map((item) => (
@@ -120,7 +117,6 @@ export default function ContactSection() {
                   className="group flex cursor-pointer items-center gap-3 p-3.5 sm:px-4 rounded-xl border border-white/[0.07] bg-white/[0.03] backdrop-blur-md transition-all duration-200 hover:border-[#e91e8c]/35 hover:bg-[#e91e8c]/[0.05] hover:-translate-y-0.5"
                   role="listitem"
                 >
-                  {/* Icon */}
                   <div
                     className="w-10 h-10 rounded-lg bg-[#e91e8c]/10 border border-[#e91e8c]/25 flex items-center justify-center text-[#e91e8c] shrink-0 transition-colors duration-200 group-hover:bg-[#e91e8c]/20"
                     aria-hidden="true"
@@ -128,7 +124,6 @@ export default function ContactSection() {
                     {ICON_MAP[item.icon] ?? <Mail size={18} />}
                   </div>
 
-                  {/* Body Info */}
                   <div className="flex flex-col gap-0.75 flex-1 min-w-0">
                     <div className="flex items-center gap-1.75">
                       <span className="text-[9px] font-mono text-[#e91e8c]/50 tracking-[0.12em] uppercase">
@@ -175,7 +170,6 @@ export default function ContactSection() {
               ))}
             </div>
 
-            {/* Copy Toast */}
             <div
               className={`flex items-center justify-center gap-1.5 py-2 px-4 rounded-md text-[11px] font-mono text-green-400 bg-green-400/10 border border-green-400/20 transition-all duration-250 pointer-events-none ${copied
                 ? 'opacity-100 translate-y-0'
@@ -190,7 +184,6 @@ export default function ContactSection() {
           </div>
         </div>
 
-        {/* Footer Meta */}
         <div className="flex items-center justify-start pt-12  flex-wrap gap-3">
           <span className="text-[10px] font-mono text-[#f0e8f0]/20">
             © 2026 Arya Maulana

@@ -6,16 +6,31 @@ import { STACK_GROUPS, MINDSET_CARDS, PERSPECTIVE_ITEMS } from '@/lib/about'
 
 export default function AboutSection() {
   return (
-    <section id="about" className="w-full max-w-[1100px] mx-auto px-6 md:mt-16 mt-10 text-zinc-200 font-sans">
-      <div className="mb-6">
+    <section
+      id="about"
+      className="relative w-full max-w-[1100px] mx-auto px-10 md:mt-4 mt-10 text-zinc-200 font-sans bg-white/2 p-6 rounded-2xl shadow-2xl border border-[var(--color-accent)]/20 overflow-hidden"
+    >
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="w-full h-full pointer-events-auto">
+          <Lanyard
+            position={[0, 0, 20]}
+            anchorX={4}
+            gravity={[0, -40, 0]}
+            fov={20}
+            transparent={true}
+          />
+        </div>
+      </div>
+
+      <div className="relative z-10 mb-6 pointer-events-none">
         <div className="flex items-center gap-3 font-mono text-[11px] text-[var(--color-accent)] tracking-widest uppercase">
           <span>About</span>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-12 lg:gap-8 items-start relative">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-[1fr_330px] gap-12 lg:gap-8 items-start pointer-events-none">
 
-        <div className="scroll-container relative p-4 max-h-[calc(100vh-10rem)] overflow-y-auto overscroll-contain">
+        <div className="scroll-container relative p-4 max-h-[calc(100vh-10rem)] overflow-y-auto overscroll-contain pointer-events-auto">
           <div
             aria-hidden="true"
             className="absolute left-4 top-2 bottom-2 w-[1px] bg-gradient-to-b from-[var(--color-accent)]/40 via-zinc-800 to-transparent"
@@ -132,14 +147,8 @@ export default function AboutSection() {
           </ChapterBlock>
         </div>
 
-        <aside className="w-full lg:sticky lg:block lg:top-24 h-[550px] sm:h-[650px] hidden items-center justify-center rounded-2xl bg-zinc-900/40 border border-zinc-800/80 backdrop-blur-sm overflow-hidden relative">
-          <Lanyard
-            position={[0, 0, 20]}
-            gravity={[0, -40, 0]}
-            fov={20}
-            transparent={true}
-          />
-        </aside>
+        {/* Spacer kosong — cuma menjaga lebar kolom kanan, Lanyard sudah pindah ke layer absolute */}
+        <div className="hidden lg:block w-full h-[450px] pointer-events-none" />
 
       </div>
     </section>

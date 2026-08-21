@@ -15,7 +15,7 @@ import {
 import { MeshLineGeometry, MeshLineMaterial } from 'meshline';
 import * as THREE from 'three';
 
-// import lanyardPng from './lanyard.png';
+// import lanyardPng from './lanyard.png';z
 const lanyardPng = './Lanyard.png'
 
 // Path langsung ke folder public
@@ -46,10 +46,11 @@ interface LanyardProps {
   imageFit?: 'cover' | 'contain';
   lanyardImage?: string | null;
   lanyardWidth?: number;
+  anchorX?: number; // geser posisi rope+card di world space (bukan kamera)
 }
 
 export default function Lanyard({
-  position = [0, 0, 30],
+  position = [0, 0, 20],
   gravity = [0, -40, 0],
   fov = 20,
   transparent = true,
@@ -57,7 +58,8 @@ export default function Lanyard({
   backImage = null,
   imageFit = 'cover',
   lanyardImage = null,
-  lanyardWidth = 1
+  lanyardWidth = 1,
+  anchorX = 0
 }: LanyardProps) {
   const [isMobile, setIsMobile] = useState<boolean>(() => typeof window !== 'undefined' && window.innerWidth < 768);
 
@@ -68,7 +70,7 @@ export default function Lanyard({
   }, []);
 
   return (
-    <div className="relative z-0 w-full h-screen flex justify-center items-center transform scale-100 origin-center">
+    <div className="relative z-0 w-full h-full">
       <Canvas
         camera={{ position, fov }}
         dpr={[1, isMobile ? 1.5 : 2]}
@@ -84,6 +86,7 @@ export default function Lanyard({
             imageFit={imageFit}
             lanyardImage={lanyardImage}
             lanyardWidth={lanyardWidth}
+            anchorX={anchorX}
           />
         </Physics>
         <Environment blur={0.75}>
@@ -130,6 +133,7 @@ interface BandProps {
   imageFit?: 'cover' | 'contain';
   lanyardImage?: string | null;
   lanyardWidth?: number;
+  anchorX?: number;
 }
 
 type LanyardRigidBody = RapierRigidBody & {
@@ -144,7 +148,8 @@ function Band({
   backImage = null,
   imageFit = 'cover',
   lanyardImage = null,
-  lanyardWidth = 1
+  lanyardWidth = 1,
+  anchorX = 0
 }: BandProps) {
   const band = useRef<THREE.Mesh<InstanceType<typeof MeshLineGeometry>, InstanceType<typeof MeshLineMaterial>>>(null!);
   const fixed = useRef<RapierRigidBody>(null!);
@@ -289,7 +294,7 @@ function Band({
 
   return (
     <>
-      <group position={[0, 4, 0]}>
+      <group position={[anchorX, 4, 0]}>
         <RigidBody ref={fixed} {...segmentProps} type="fixed" />
         <RigidBody position={[0.5, 0, 0]} ref={j1} {...segmentProps} type="dynamic">
           <BallCollider args={[0.1]} />

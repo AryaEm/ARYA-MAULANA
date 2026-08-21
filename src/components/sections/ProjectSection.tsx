@@ -6,7 +6,6 @@ import ProjectCard from "../ui/ProjectCard";
 export default function ProjectSection() {
     return (
         <section className="w-full max-w-6xl mx-auto px-4 md:px-0 py-20 md:py-28">
-            {/* Header */}
             <div className="relative mb-12 md:mb-16">
                 <div className="flex items-center gap-2.5 mb-4">
                     <span className="w-2 h-2 rounded-full bg-[var(--color-accent)] animate-pulse" />
@@ -27,7 +26,6 @@ export default function ProjectSection() {
                 <div className="mt-6 h-px w-full bg-[var(--color-border-soft)]" />
             </div>
 
-            {/* Masonry grid */}
             <div className="columns-1 sm:columns-2 lg:columns-3 gap-5">
                 {projects.map((project, idx) => (
                     <div key={project.id} className="mb-5 break-inside-avoid">
